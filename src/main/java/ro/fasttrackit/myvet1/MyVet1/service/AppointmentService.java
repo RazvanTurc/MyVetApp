@@ -29,9 +29,6 @@ public class AppointmentService {
     }
 
     private Appointment checkAppointment(Appointment appointment) {
-//        Optional<Appointment> appointment = repository.findById(id);
-//        replaceAppointment(id, new Appointment(appointment.get().getPreciseTime(),"--","--","--"));
-//
         Appointment currentAppointment = getAppointmentByPreciseTime(appointment.getPreciseTime());
         return replaceAppointment(currentAppointment.getId(), appointment);
 
